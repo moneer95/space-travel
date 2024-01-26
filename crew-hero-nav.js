@@ -51,8 +51,8 @@ document.addEventListener('touchstart', (e) => {
 });
 
 
-document.addEventListener('touchcancel', (e) => {
-  const currentX = e.touches[0].clientX;
+document.addEventListener('touchmove', (e) => {
+  const currentX = e.touches[100].clientX;
   changeTabPanel(tabButtons[--index])
   // Detect the direction of the swipe
   if (currentX < initialX) {
