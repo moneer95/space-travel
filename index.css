@@ -243,7 +243,7 @@ select {
 /* ------------------- */
 
 .large-button {
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: relative;
     z-index: 1;
     display: inline-grid;
@@ -295,6 +295,7 @@ select {
 
 .primary-navigation a {
     text-decoration: none;
+    padding-block: 34px;
 }
 
 .primary-navigation a > span {
@@ -326,6 +327,10 @@ select {
     
     .primary-navigation.underline-indicators > .active {
        border: 0;
+    }
+    
+    .large-button {
+        font-size: 1.7rem;
     }
     
     .mobile-nav-toggle {
@@ -368,16 +373,16 @@ select {
 
 @media (min-width: 45em) {
     
-     .primary-header::after {
-         content: '';
-         display: block;
-         position: relative;
-         height: 1px;
-         width: 100%;
-         margin-right: -2.5rem;
-         background: hsl( var(--clr-white) / .25);
-         order: 1;
-     }
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 100%;
+        margin-right: -2.5rem;
+        background: hsl( var(--clr-white) / .25);
+        order: 1;
+    }
      
     nav {
         order: 2;
@@ -385,6 +390,10 @@ select {
     
     .primary-navigation {
         margin-block: 2rem;
+    }
+    
+    .large-button {
+        font-size: 2rem;
     }
     
    
@@ -533,7 +542,7 @@ body {
     .crew-hero-nav {
     display: block;
 }
-} 
+}
 
 /* ----------------------------- */
 /* Layout                        */
