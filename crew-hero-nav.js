@@ -60,12 +60,18 @@ document.addEventListener('touchmove', (e) => {
     if(index === 0){
         index = 4;
     }
-    changeTabPanel(tabButtons[--index])  } else if (currentX > initialX) {
+    changeTabPanel(tabButtons[0])
+
+    changeTabPanel(tabButtons[--index])  } 
+    
+  else if (currentX > initialX) {
     // Swipe right
     if(index === 3){
         index = -1;
     }
-    changeTabPanel(tabButtons[++index])  }
+    changeTabPanel(tabButtons[++index])  
+    changeTabPanel(tabButtons[0])
+}
 
   // Update the initial position for the next touchmove event
   initialX = currentX;
