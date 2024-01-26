@@ -60,7 +60,6 @@ document.addEventListener('touchmove', (e) => {
     if(index === 0){
         index = 4;
     }
-    changeTabPanel(tabButtons[0])
 
     changeTabPanel(tabButtons[--index])  } 
     
@@ -70,9 +69,8 @@ document.addEventListener('touchmove', (e) => {
         index = -1;
     }
     changeTabPanel(tabButtons[++index])  
-    changeTabPanel(tabButtons[0])
 }
 
   // Update the initial position for the next touchmove event
-  initialX = currentX;
+//   initialX = currentX;
 });
