@@ -51,7 +51,7 @@ document.addEventListener('touchstart', (e) => {
 });
 
 
-document.addEventListener('touchmove', (e) => {
+document.addEventListener('touchend', (e) => {
   const currentX = e.touches[0].clientX;
 
   // Detect the direction of the swipe
