@@ -27,7 +27,6 @@ leftCrewArrow.addEventListener('mousedown',(e) => {
     }
      
     changeTabPanel(tabButtons[--index])
-    console.log(index)
 })
 
 
@@ -37,5 +36,37 @@ rightCrewArrow.addEventListener('mousedown',(e) => {
     }
      
     changeTabPanel(tabButtons[++index])
-    console.log(index)
 })
+
+
+
+
+
+
+
+let initialX;
+document.addEventListener('touchstart', (e) => {
+  initialX = e.touches[0].clientX;
+  console.log(e.touches)
+});
+
+
+document.addEventListener('touchmove', (e) => {
+  const currentX = e.touches[0].clientX;
+
+  // Detect the direction of the swipe
+  if (currentX < initialX) {
+    // Swipe left
+    if(index === 0){
+        index = 4;
+    }
+    changeTabPanel(tabButtons[--index])  } else if (currentX > initialX) {
+    // Swipe right
+    if(index === 3){
+        index = -1;
+    }
+    changeTabPanel(tabButtons[++index])  }
+
+  // Update the initial position for the next touchmove event
+  initialX = currentX;
+});
